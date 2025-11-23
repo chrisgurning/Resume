@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asep Christopher Gurning - SDET Portfolio</title>
+    <link rel="icon" href="Profile Photo_Asep Christopher Gurning.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header Hero */
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: fadeInDown 1s ease-out;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero h1 {
+            font-size: 3rem;
+            color: #4a5568;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .hero .title {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        .contact a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #764ba2;
+        }
+        .contact i {
+            margin-right: 5px;
+        }
+
+        /* Sections */
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            font-size: 2rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Summary */
+        .summary p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Experience */
+        .experience-item {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .experience-item li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+            padding-right: 30px;
+        }
+        .experience-item li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .skill-item {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+        .skill-item i {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Education */
+        .education ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .education li {
+            background: #f8fafc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-item {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+        .project-item i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Languages & Strengths */
+        .languages, .strengths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .lang-item, .strength-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: background 0.3s;
+        }
+        .lang-item:hover, .strength-item:hover {
+            background: #e2e8f0;
+        }
+        .lang-item i, .strength-item i {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero .title { font-size: 1.2rem; }
+            .contact { flex-direction: column; gap: 10px; }
+            section { padding: 20px; }
+            h2 { font-size: 1.5rem; }
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: none;
+            transition: opacity 0.3s;
+        }
+        .scroll-top.show {
+            display: block;
+        }
+        .scroll-top:hover {
+            background: #764ba2;
+        }
+        .profile-img {
+            width: 160px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section dengan Foto Profil -->
+        <section class="hero">
+            <img src="Profile Photo_Asep Christopher Gurning.jpeg" alt="Asep Christopher Gurning - Profile Photo"
+     class="profile-img">
+            <h1>ASEP CHRISTOPHER GURNING</h1>
+            <p class="title">Software Development Engineer in Test (SDET)</p>
+            <div class="contact">
+                <span><i class="fas fa-map-marker-alt"></i> Yogyakarta, Indonesia</span>
+                <a href="mailto:chrisgurning@gmail.com"><i class="fas fa-envelope"></i> chrisgurning@gmail.com</a>
+                <a href="https://www.linkedin.com/in/christopher-1999" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+            </div>
+        </section>
+
+        <!-- Professional Summary -->
+        <section class="summary">
+            <h2>Professional Summary</h2>
+            <p>Detail-oriented SDET with expertise in automation testing using Java & JavaScript. Passionate about improving software quality through automation, API testing, and CI/CD integration. Experienced in fintech, distribution, and e-learning testing. Strong problem-solving skills and cross-team collaboration.</p>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>DANA Indonesia | SDET | September 2022 – Present</h3>
+                <ul>
+                    <li>Conduct penetration testing for Financial Service projects within DANA Indonesia.</li>
+                    <li>Utilize various penetration testing tools such as Burp Suite, Linux/Unix environments, Python, Frida, and other security assessment tools.</li>
+                    <li>Prepare comprehensive security reports and develop threat models to support product security initiatives.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>DANA Indonesia | SDET | Jul 2022 – September 2025</h3>
+                <ul>
+                    <li>Developed and maintained automation testing frameworks using Java and JavaScript.</li>
+                    <li>Develop API for regression website reporting using Golang</li>
+                    <li>Improved regression website reporting using TypeScript.</li>
+                    <li>Executed API, UI, & regression testing for Mobile, Member, Merchant and Risk Team features.</li>
+                    <li>Integrate automated tests into CI/CD pipelines.</li>
+                    <li>Conduct performance testing & implement Unit Tests.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>XL Axiata | QA Automation Engineer | Jul 2021 – Jul 2022</h3>
+                <ul>
+                    <li>Developed automated test scripts (JavaScript, Jest).</li>
+                    <li>Conducted manual & automation testing (web, mobile).</li>
+                    <li>Integrated test automation with CI/CD pipelines.</li>
+                    <li>Created bug reports & implemented Unit Tests.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>PT Codemi Global | QA Intern | Apr 2021 – Jul 2021</h3>
+                <ul>
+                    <li>Automated tests using Katalon Studio for an LMS.</li>
+                    <li>Conducted manual testing (UI & API validations).</li>
+                    <li>Designed test cases & reported bugs.</li>
+                    <li>Assisted in performance testing & developed Unit Tests.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Simplidots | QA Engineer Freelance | Feb 2021 – May 2021</h3>
+                <ul>
+                    <li>Automated test cases with Cucumber (BDD).</li>
+                    <li>Performed API, UI, & regression testing (SaaS platform).</li>
+                    <li>Reported defects & enhanced automation frameworks.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="skills-section">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <i class="fas fa-robot"></i>
+                    Automation Testing – Java, JavaScript, Cucumber, Jest, Katalon
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    API Testing – Postman, REST Assured
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cogs"></i>
+                    CI/CD & Agile – Jenkins, Git
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Performance Testing – JMeter, K6
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    Unit Testing – JUnit, Jest
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-laptop-code"></i>
+                    Web Backend – Golang
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-laptop-code"></i>
+                    Web Frontend – JavaScript, TypeScript
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                    Mercu Buana Yogyakarta | Undergraduate (2025 – Present) – Informatics Engineering
+                </li>
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                    IPB University | Diploma (D3) (2017 – 2021) – Informatics Management
+                </li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-item">
+                    <i class="fas fa-shield-alt"></i>
+                    Testing Automation – DANA
+                </div>
+                <div class="project-item">
+                    <i class="fas fa-book"></i>
+                    LMS Automation Testing – Codemi
+                </div>
+                <div class="project-item">
+                    <i class="fas fa-truck"></i>
+                    Supply Chain SaaS Testing – Simplidots
+                </div>
+                <div class="project-item">
+                    <i class="fas fa-chart-line"></i>
+                    Performance Testing Framework – XL Axiata
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="languages-section">
+            <h2>Languages</h2>
+            <div class="languages">
+                <div class="lang-item">
+                    <i class="fas fa-globe"></i>
+                    Bahasa Indonesia (Native)
+                </div>
+                <div class="lang-item">
+                    <i class="fas fa-globe"></i>
+                    English (Professional)
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Strengths -->
+        <section class="strengths-section">
+            <h2>Personal Strengths</h2>
+            <div class="strengths">
+                <div class="strength-item">
+                    <i class="fas fa-lightbulb"></i>
+                    Problem-Solving & Critical Thinking
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-users"></i>
+                    Team Collaboration & Communication
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-arrow-up"></i>
+                    Continuous Learning
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-eye"></i>
+                    Attention to Detail & Test Optimization
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-search"></i>
+                    Strong Analytical & Debugging Skills
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" onclick="scrollToTop()" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide scroll button
+        window.onscroll = function() {
+            const btn = document.getElementById('scrollTopBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        };
+
+        // Add stagger animation to sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach((sec, index) => {
+            sec.style.animationDelay = `${index * 0.2}s`;
+        });
+    </script>
+</body>
+</html>
