@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! I'm Asep Christopher Gurning, a passionate **Software Development Engineer in Test (SDET)** based in Yogyakarta, Indonesia. This site showcases my professional journey, skills, experiences, and projects in automation testing, QA engineering, and software quality assurance.
 
-🚀 **Live Demo**: [View Portfolio]()
+🚀 **Live Demo**: [View Portfolio](https://chrisgurning.github.io/Resume/)
 
 ## About Me
 Detail-oriented SDET with expertise in automation testing using Java & JavaScript. Passionate about improving software quality through automation, API testing, and CI/CD integration. Experienced in fintech, distribution, and e-learning testing. Strong problem-solving skills and cross-team collaboration.
@@ -10,7 +10,7 @@ Detail-oriented SDET with expertise in automation testing using Java & JavaScrip
 - 📍 **Location**: Yogyakarta, Indonesia
 - 📧 **Email**: [chrisgurning@gmail.com](mailto:chrisgurning@gmail.com)
 - 🔗 **LinkedIn**: [Asep Christopher Gurning](https://www.linkedin.com/in/christopher-1999) 
-- 🌐 **Portfolio**: [Live Site]()
+- 🌐 **Portfolio**: [Live Site](https://chrisgurning.github.io/Resume/)
 - 📂 **GitLab Repo**: [View Source](https://github.com/chrisgurning/Resume) 
 
 ## Features
